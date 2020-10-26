@@ -243,7 +243,7 @@ router.post('/', function(req, res, next) {
 router.get('/dashboard', checkLoginUser , function(req, res, next) {
   var loginUser=localStorage.getItem('loginuser');
 
-  res.render('dashboard.ejs', { title: 'user dashborad', loginUser:loginUser });
+  res.render('dashboard.ejs', { title: 'Steps to add new Password:', loginUser:loginUser });
 });
 
 router.get('/category', checkLoginUser , function(req, res, next) {  var loginUser=localStorage.getItem('loginuser');
@@ -252,7 +252,7 @@ router.get('/category', checkLoginUser , function(req, res, next) {  var loginUs
 getpasswordcategory.exec(function(err,data){
   if(err) throw err;
   
-  res.render('category.ejs', { title: 'Add new Category' , loginUser:loginUser ,records:data});
+  res.render('category.ejs', { title: 'Category list' , loginUser:loginUser ,records:data});
   
   })
 
@@ -348,7 +348,7 @@ passworddetails:passworddetails
 
 
 
-router.get('/edit1/:id', checkLoginUser , function(req, res, next) {  
+router.get('/edit/:id', checkLoginUser , function(req, res, next) {  
   var loginUser=localStorage.getItem('loginuser');
 
 var passcatid=req.params.id;
@@ -362,7 +362,7 @@ var getpass=passwordcategorymodule.findById(passcatid);
   res.render('edit1', { title: 'Edit Password Category' , loginUser:loginUser ,error:'' , msg:'' , records:data , id:passcatid});
   
  });
-
+ 
 });
 
 router.post('/edit/', checkLoginUser , checkpasswordcategory1 , function(req, res, next) {  

@@ -15,9 +15,24 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+</style>
+<link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+<style>
+  h1{
+  
+  padding:20px;
+  text-align:center;
+      font-family: 'Charm';
+      font-size: 5em;
+      color:blue;
+  }
+  </style>
   </head>
   <body>
-    <h1 class="text-center"> PASSWORD MANAGEMENT SYSTEM</h1>
+    <h1 class="text-center"> Password Management System</h1>
     
     <div class="container">
       <h2> <%= title %></h2>
@@ -55,7 +70,13 @@
       </form>
     </div>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
 
   </body>
 </html>

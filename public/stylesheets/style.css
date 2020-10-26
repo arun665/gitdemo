@@ -2,7 +2,9 @@ table{
   padding:50px;
 }
 body {
-  background: linear-gradient( #F2AA4CFF 100%);
+  background-color:black;
+  color:white;
+  
 
 
   font:14px "Lucida Grande", Helvetica, Arial, sans-serif;
